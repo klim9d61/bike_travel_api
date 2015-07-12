@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bike Travel</title>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag  '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css' %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag  '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-static-top navbar-inverse">
+  <div class="container">
+    <%= render(:partial => 'layouts/navigation', :locals => { :subjects => @subjects }) %>
+    <ul class="nav navbar-nav navbar-right">
+      <li class="navbar-right">
+        <%= link_to(" Login", {:controller => 'access', :action => 'login'}, :class => 'glyphicon glyphicon-user') %>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="container">
+
+  <% if !flash[:notice].blank? %>
+    <div class="notice">
+      <%= flash[:notice] %>
+    </div>
+  <% end %>
+
+  <!-- before yield -->
+  <%= yield %>
+  <!-- after yield -->
+</div>
+</body>
+</html>

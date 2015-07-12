@@ -1,0 +1,21 @@
+<h2>Update Subject</h2>
+<%= link_to("<< Back to List", subjects_path, :class => 'back-link') %>
+
+<%= form_for(@subject) do |f| %>
+
+    <div class="field">
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </div>
+    <div class="field">
+      <%= f.label :position %><br>
+      <%= f.text_field :position %>
+    </div>
+    <div class="field">
+      <%= f.label :visible %><br>
+      <%= f.text_field :visible %>
+    </div>
+    <div class="actions">
+      <%= submit_tag("Update Subject") %>
+    </div>
+<% end %>

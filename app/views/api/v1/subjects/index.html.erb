@@ -1,0 +1,32 @@
+<% @page_title = "Subjects" %>
+
+<h2>Subjects</h2>
+<%= link_to("Add New Subject", new_subject_path, :class => 'action new') %>
+
+<table class="table">
+  <thead>
+  <tr class="header">
+    <th>&nbsp;</th>
+    <th>Subject</th>
+    <th>Visible</th>
+    <th>Pages</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @subjects.each do |subject| %>
+      <tr>
+        <td><%= subject.position %></td>
+        <td><%= subject.name %></td>
+        <td><%= subject.visible ? 'Yes' : 'No' %></td>
+        <td></td>
+        <td>
+          <%= link_to("Show", subject_path(subject.id), :class => 'action show') %>
+          <%= link_to("Edit", edit_subject_path(subject.id), :class => 'action edit') %>
+          <%= link_to("Delete", delete_subject_path(subject.id), :class => 'action delete') %>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>

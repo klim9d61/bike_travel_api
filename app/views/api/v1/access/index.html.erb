@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="menu">
+      <h2>Admin Menu</h2>
+      <div class="identity">Logged in as:</div>
+      <br/>
+      <ul>
+        <li><%= link_to("Manage Subjects", :controller => 'subjects') %></li>
+        <li><%= link_to("Manage Pages", '#') %></li>
+        <li><%= link_to("Manage Sections", '#') %></li>
+        <li><%= link_to("Manage Admin Users", '#') %></li>
+        <li><%= link_to("Logout", :action => 'logout') %></li>
+      </ul>
+    </div>
+</div>
