@@ -1,22 +1,19 @@
-# ruby-getting-started
+# Bike Travel Api
 
-A barebones Rails app, which can easily be deployed to Heroku.
-
-This application support the [Getting Started with Ruby on Heroku](https://devcenter.heroku.com/articles/getting-started-with-ruby) article - check it out.
+An api on Rails for learning purpose
 
 ## Running Locally
 
-Make sure you have Ruby installed.  Also, install the [Heroku Toolbelt](https://toolbelt.heroku.com/).
+Make sure you have Ruby installed.
 
 ```sh
-$ git clone git@github.com:heroku/ruby-getting-started.git
-$ cd ruby-getting-started
+$ git clone https://github.com/klim9d61/bike_travel_api.git
+$ cd bike_travel_api
 $ bundle install
 $ bundle exec rake db:create db:migrate
-$ foreman start web
 ```
 
-Your app should now be running on [localhost:5000](http://localhost:5000/).
+Your app should now be running on [localhost:3000](http://localhost:3000/).
 
 ## Deploying to Heroku
 
