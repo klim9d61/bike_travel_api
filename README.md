@@ -11,6 +11,7 @@ $ git clone https://github.com/klim9d61/bike_travel_api.git
 $ cd bike_travel_api
 $ bundle install
 $ bundle exec rake db:create db:migrate
+$ rails s
 ```
 
 Your app should now be running on [localhost:3000](http://localhost:3000/).
